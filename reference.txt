@@ -1,0 +1,619 @@
+1부 서문
+
+계산 기계와 지능, 앨런 튜링
+1950년 철학 저널인 '마인드' 제59권 236호에 영국 수학자 앨런 튜링Alan Turing의 논문 한 편이 실렸다. '계산 기계와 지능Computing Machinery and Intelligence'이라는 제목의 논문에서 튜링은 '기계는 생각할 수 있는가?'라는 질문과 이를 검증하는 방법으로 튜링 테스트를 제안했다. 이 논문을 인공지능의 시작으로 보는 데는 큰 이견이 없다.  
+https://doi.org/10.1093/mind/LIX.236.433
+공개
+
+
+
+1장 없음
+
+2장
+1943년, 신경생리학자인 워런 맥컬럭Warren McCulloch과 정규 교육도 제대로 받지 않은 10대의 천재 월터 피츠Walter Pitts는 '신경 활동에 내재된 관념들의 논리적 계산'이라는 논문에서 생물 신경계의 뉴런도 0과 1을 처리하는 논리 회로처럼 동작한다고 주장했다. 이들은 여러 뉴런으로부터 입력된 신호에 고정된 가중치를 곱해 출력하는 인공 뉴런 모델을 고안하고, 이 모델로 논리곱AND, 논리합OR, 논리부정NOT과 같은 기본 논리 연산을 모두 구현할 수 있음을 증명했다.
+
+제목: A Logical Calculus of the Ideas Immanent in Nervous Activity
+저자: Warren S. McCulloch, Walter Pitts
+출처: Bulletin of Mathematical Biophysics, Vol. 5, No. 4, pp. 115–133 (1943)
+DOI: https://doi.org/10.1007/BF02478259
+비공개
+
+이 논문은 많은 사람에게 영감을 줬다. 코넬 항공 연구소의 프랭크 로젠블랫Frank Rosenblatt은 그중 한 사람이었다. 로젠블랫은 맥컬럭과 피츠가 고안한 인공 뉴런의 한계, 즉 가중치 값이 고정되어 있다는 점에 주목했다. 그는 인간의 뇌처럼 필요에 따라 스스로 지식을 습득하고 가중치를 조정할 수 있는 모델을 연구했고, 그 결과 1957년 최초의 학습 가능한 인공 뉴런인 퍼셉트론을 제안했다. 
+
+저자: Frank Rosenblatt
+출처: Psychological Review, Vol. 65, No. 6, pp. 386–408 (1958)
+DOI: https://doi.org/10.1037/h0042519
+공개여부: 비공개
+특이사항: 퍼셉트론은 1957년 로젠블랫이 재직하던 코넬 항공 연구소의 보고서를 통해 최초로 공개되었으며, 이후 1958년 논문으로 발표되었다. 로젠블랫의 퍼셉트론 논문은 보통 후자를 말한다. 
+
+
+3장
+
+1969년 마빈 민스키Marvin Minsky와 시모어 페퍼트Seymour Papert는 그들의 저서 '퍼셉트론스Perceptrons'에서 퍼셉트론만으로는 하나의 직선으로 나눌 수 없는 문제를 풀 수 없음을 수학적으로 증명했다. 이 책이 계기가 되어 인공지능 분야의 열기는 급격하게 식어버렸다.
+
+제목: Perceptrons: An Introduction to Computational Geometry(퍼셉트론: 계산 기하학 입문)
+저자: Marvin Minsky, Seymour Papert
+출처: MIT Press, Cambridge, MA (1969)
+ISBN: 0-262-13043-2
+공개여부: 비공개 (Internet Archive에 접근 제한 대출 형태로 등록되어 있음)
+
+
+1986년 데이비드 럼멜하트David Rumelhart, 제프리 힌튼Geoffrey Hinton, 로널드 윌리엄스Ronald Williams가 역전파 알고리즘으로 다층 퍼셉트론을 효과적으로 학습할 수 있음을 보이면서 돌파구가 열렸다.
+
+제목: Learning Representations by Back-Propagating Errors(오차 역전파를 통한 표현 학습)
+저자: David E. Rumelhart, Geoffrey E. Hinton, Ronald J. Williams
+출처: Nature, Vol. 323, No. 6088, pp. 533–536 (1986)
+DOI: https://doi.org/10.1038/323533a0
+공개여부: 비공개
+
+4장 
+서문
+
+
+2006년 페이페이 리Fei-Fei Li는 당시 AI 연구의 일반적인 경향과 다른 선택을 했다. 학계의 관심은 모델 구조를 개선하고 더 뛰어난 학습 알고리즘을 찾는 데 쏠려 있었다. 하지만 리는[JJK2.1] 알고리즘보다 데이터가 더 중요하다고 확신했고, 대규모 데이터셋 구축 프로젝트를 시작했다. 3년에 걸쳐 이미지를 수집하고 수만 명이 직접 정답을 붙이는 과정을 거쳐, 1,400만 장의 이미지로 구성된 이미지넷ImageNet 데이터셋이 완성되었다.
+
+이미지넷 데이터셋 관련 논문
+
+제목: ImageNet: A Large-Scale Hierarchical Image Database(이미지넷: 대규모 계층적 이미지 데이터베이스)
+
+저자: Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, Li Fei-Fei
+
+출처: 2009 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 248–255 (2009)
+
+DOI: https://doi.org/10.1109/CVPR.2009.5206848
+
+공개여부: 비공개 (IEEE Xplore 유료 접근이 원칙이나, ImageNet 공식 사이트 image-net.org에서 무료 PDF를 함께 제공하고 있어 이쪽도 참고용으로 병기 가능)
+
+알렉스넷 논문
+
+제목: ImageNet Classification with Deep Convolutional Neural Networks(깊은 합성곱 신경망을 이용한 이미지넷 분류)
+
+저자: Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton
+
+출처: Advances in Neural Information Processing Systems (NeurIPS), Vol. 25, pp. 1097–1105 (2012)
+
+DOI: 없음 (NeurIPS 2012 proceedings 원본 논문에는 DOI가 부여되어 있지 않음)
+
+공개여부: 공개 (NeurIPS 공식 proceedings 페이지에서 전문 PDF를 무료로 제공)
+https://proceedings.neurips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
+
+4-3
+
+여기에 포함된 MNIST 데이터셋 은 얀 르쿤Yann LeCun이 LeNet-5 신경망을 개발하기 위해 미국 국립표준기술연구소(NIST)의 손 글씨 데이터를 정제해 만든 손 글씨 숫자 데이터셋으로, 손 글씨 숫자 인식 모델 개발의 기준 데이터로 지금까지도 널리 사용되고 있다. datasets.MNIST 클래스를 사용해 파이토치의 내장 데이터셋으로 MNIST 데이터셋을 불러오면, 내려받기, 불러오기, 데이터셋 정의 같은 과정을 직접 구현하지 않고도 데이터로더를 구성할 수 있는 데이터셋 객체가 만들어진다.
+
+MNIST 데이터셋은 얀 르쿤이 LeNet-5를 소개한 논문에서 함께 발표되었습니다.
+
+제목: Gradient-Based Learning Applied to Document Recognition(문서 인식에 적용된 그래디언트 기반 학습)
+
+저자: Yann LeCun, Léon Bottou, Yoshua Bengio, Patrick Haffner
+
+출처: Proceedings of the IEEE, Vol. 86, No. 11, pp. 2278–2324 (1998)
+
+DOI: https://doi.org/10.1109/5.726791
+
+공개여부: 비공개 (IEEE Xplore 기준. 다만 저자인 얀 르쿤의 개인 홈페이지에서 논문 PDF를 자체적으로 공개하고 있어 그쪽으로는 무료 열람 가능 — http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)
+
+
+
+5장
+도입
+1959년, 신경생리학자 데이비드 허블David Hubel과 토르스텐 비젤Torsten Wiesel은 고양이의 시각 피질에 전극을 꽂아 뇌세포의 반응을 기록하는 실험을 했다. 그 결과 고양이의 시야에 들어온 사물의 경계선 방향에 따라 뇌 속의 서로 다른 뉴런이 반응한다는 사실을 발견했다. 나아가 경계선에 반응하는 뉴런의 신호를 조합한 복잡한 형태에 반응하는 뉴런도 정해져 있다는, 시각 정보 처리의 계층적 구조도 밝혀냈다. 이 발견으로 두 사람은 1981년 노벨 생리의학상을 수상했다.
+
+제목: Receptive Fields of Single Neurones in the Cat's Striate Cortex(고양이 선조 피질 단일 뉴런의 수용장)
+
+저자: David H. Hubel, Torsten N. Wiesel
+
+출처: The Journal of Physiology, Vol. 148, No. 3, pp. 574–591 (1959)
+
+DOI: https://doi.org/10.1113/jphysiol.1959.sp006308
+
+공개여부: 공개 (PubMed Central, PMCID: PMC1363130)
+
+참고로 두 사람은 이후에도 원숭이 시각 피질을 대상으로 후속 연구를 여러 편 발표했는데, 그중 시각 피질의 계층적 구조(단순 세포 → 복합 세포 → 초복합 세포)를 더 포괄적으로 정리한 후속 논문도 함께 언급할 만합니다.
+
+Hubel, D. H., & Wiesel, T. N. (1962). Receptive fields, binocular interaction and functional architecture in the cat's visual cortex. The Journal of Physiology, 160(1), 106–154. https://doi.org/10.1113/jphysiol.1962.sp006837
+
+이 1962년 논문이 "단순 세포/복합 세포"라는 용어와 계층적 구조를 더 명확히 정리한 논문으로 자주 인용되니, 책의 서술 내용(경계선 방향 반응 + 계층적 구조)에 따라 이 논문도 함께 소개하시는 게 더 정확할 수 있습니다.
+
+
+'인간의 시각 피질이 하는 일을 인공 신경망도 할 수 있을까?' 이 실험 결과가 먼 훗날 딥러닝에 던진 질문은 단순했다. 1980년 후쿠시마 구니히코福島 邦彦가 제안한 네오코그니트론Neocognitron은 이 질문에 대한 첫 번째 시도였다. 네오코그니트론은 시각 정보를 구조적으로 처리하는 선구적인 방법을 제시했지만, 데이터에 기반해 학습하는 모델을 완성하지는 못했다. 
+
+제목: Neocognitron: A Self-Organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position(네오코그니트론: 위치 이동에 영향받지 않는 패턴 인식 메커니즘을 위한 자기 조직화 신경망 모델)
+
+저자: Kunihiko Fukushima(후쿠시마 구니히코)
+
+출처: Biological Cybernetics, Vol. 36, No. 4, pp. 193–202 (1980)
+
+DOI: https://doi.org/10.1007/BF00344251
+
+공개여부: 비공개 (Springer 유료 접근)
+
+이 질문에 답한 연구자는 딥러닝의 살아 있는 전설 중 한 사람인 얀 르쿤이었다. 1989년, 역전파 알고리즘을 결합해 만들어낸 합성곱 신경망이 바로 그 답이었다. 그리고 1998년에 발표한 LeNet-5는 그 답이 실용적이기까지 하다는 사실을 증명한 셈이었다.
+
+제목: Backpropagation Applied to Handwritten Zip Code Recognition(손 글씨 우편번호 인식에 적용된 역전파)
+
+저자: Yann LeCun, Bernhard Boser, John S. Denker, Donnie Henderson, Richard E. Howard, Wayne Hubbard, Lawrence D. Jackel
+
+출처: Neural Computation, Vol. 1, No. 4, pp. 541–551 (1989)
+
+DOI: https://doi.org/10.1162/neco.1989.1.4.541
+
+공개여부: 비공개
+
+참고로 이어서 언급하신 LeNet-5는 앞서 정리해드린 아래 논문에 담겨 있으니, 두 논문을 함께 인용하시면 됩니다.
+
+제목: Gradient-Based Learning Applied to Document Recognition(문서 인식에 적용된 그래디언트 기반 학습)
+
+저자: Yann LeCun, Léon Bottou, Yoshua Bengio, Patrick Haffner
+
+출처: Proceedings of the IEEE, Vol. 86, No. 11, pp. 2278–2324 (1998)
+
+DOI: https://doi.org/10.1109/5.726791
+
+공개여부: 비공개 (다만 저자 홈페이지에서 PDF 무료 제공: http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)
+
+
+
+5-3
+2008년 MIT의 안토니오 토랄바Antonio Torralba 연구팀이 '8,000만 개의 작은 이미지80 Million Tiny Images'라는 데이터셋을 공개했다. 그리고 이듬해인 2009년 제프리 힌턴 연구실의 알렉스 크리제프스키가 기술 보고서 를 통해 이 데이터셋의 일부를 정제하고 레이블을 붙인 CIFAR-10/CIFAR-100 데이터셋을 발표했다. 이미지넷과 거의 동시기에 공개되었지만, 두 데이터셋은 다음과 같은 명확한 차이를 보였다.
+
+이 논문은 저널 논문이 아니라 대학 기술 보고서(technical report) 형태입니다.
+
+제목: Learning Multiple Layers of Features from Tiny Images(작은 이미지의 다층적 특징 학습)
+
+저자: Alex Krizhevsky
+
+출처: Technical Report, University of Toronto, Toronto, Ontario (2009)
+
+DOI: 없음 (저널 논문이 아닌 대학 기술 보고서라 DOI가 부여되지 않음)
+
+공개여부: 공개 (저자 개인 홈페이지에서 PDF 무료 제공)
+https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf
+
+6장
+
+서문
+
+홉필드가 내놓은 토대 중 하나는 1982년으로 거슬러 올라간다. 그는 뉴런이 서로의 출력을 다시 입력으로 받아들이는 홉필드 네트워크Hopfield network를 제안했다. 이 네트워크는 뉴런이 신호를 주고받는 과정을 반복하면서 특정 패턴을 더 또렷하게 기억하는 독특한 성질을 보였는데, 출력을 입력으로 되돌려 과거의 신호를 현재의 연산에 녹여내려는 아이디어가 반영된 결과였다.
+
+제목: Neural Networks and Physical Systems with Emergent Collective Computational Abilities(창발적 집단 연산 능력을 갖는 신경망과 물리계)
+
+저자: John J. Hopfield
+
+출처: Proceedings of the National Academy of Sciences, Vol. 79, No. 8, pp. 2554–2558 (1982)
+
+DOI: https://doi.org/10.1073/pnas.79.8.2554
+
+공개여부: 공개 (PNAS는 오래된 논문을 무료로 공개하는 정책을 따르고 있어 공식 페이지에서 전문 열람 가능: https://www.pnas.org/doi/10.1073/pnas.79.8.2554)
+
+6-2
+
+단순 RNN
+
+단순 RNN (Elman Network)
+
+제목: Finding Structure in Time(시간 속 구조 찾기)
+
+저자: Jeffrey L. Elman
+
+출처: Cognitive Science, Vol. 14, No. 2, pp. 179–211 (1990)
+
+DOI: https://doi.org/10.1207/s15516709cog1402_1
+
+공개여부: 공개
+
+6-3 
+LSTM
+
+LSTM (장단기 기억 신경망)
+
+제목: Long Short-Term Memory(장단기 기억)
+
+저자: Sepp Hochreiter, Jürgen Schmidhuber
+
+출처: Neural Computation, Vol. 9, No. 8, pp. 1735–1780 (1997)
+
+DOI: https://doi.org/10.1162/neco.1997.9.8.1735
+
+공개여부: 비공개
+
+GRU
+
+제목: Learning Phrase Representations Using RNN Encoder-Decoder for Statistical Machine Translation(RNN 인코더-디코더를 이용한 통계적 기계 번역의 구절 표현 학습)
+
+저자: Kyunghyun Cho, Bart van Merriënboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, Yoshua Bengio
+
+출처: Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP), Doha, Qatar, pp. 1724–1734 (2014)
+
+DOI: https://doi.org/10.3115/v1/D14-1179
+
+공개여부: 공개 (ACL Anthology에서 전문 PDF 무료 제공: https://aclanthology.org/D14-1179/, arXiv 프리프린트도 존재: arXiv:1406.1078)
+
+양방향 순환 신경망
+
+제목: Bidirectional Recurrent Neural Networks(양방향 순환 신경망)
+
+저자: Mike Schuster, Kuldip K. Paliwal
+
+출처: IEEE Transactions on Signal Processing, Vol. 45, No. 11, pp. 2673–2681 (1997)
+
+DOI: https://doi.org/10.1109/78.650093
+
+공개여부: 비공개 (다만 저자 소속 기관 홈페이지 등에서 PDF를 무료로 제공하는 경우가 있음: https://maxwell.ict.griffith.edu.au/spl/publications/papers/ieeesp97_schuster.pdf)
+
+7장 
+서문 
+
+1. Firth의 인용문 출처
+
+제목: A Synopsis of Linguistic Theory, 1930–1955(언어학 이론 개관, 1930–1955)
+
+저자: J. R. Firth
+
+출처: Studies in Linguistic Analysis, pp. 1–32, Blackwell, Oxford (1957)
+
+DOI: 없음 (저널 논문이 아닌 단행본 논문집(edited volume)의 한 챕터라 DOI가 부여되지 않음)
+
+공개여부: 비공개
+
+2. 신경망 언어 모델(NPLM)
+
+제목: A Neural Probabilistic Language Model(신경망 확률적 언어 모델)
+
+저자: Yoshua Bengio, Réjean Ducharme, Pascal Vincent, Christian Jauvin
+
+출처: Journal of Machine Learning Research, Vol. 3, pp. 1137–1155 (2003)
+
+DOI: 없음 (JMLR은 오픈 액세스 저널로 대부분의 초기 논문에 DOI가 부여되지 않음)
+
+공개여부: 공개 (JMLR 공식 사이트에서 전문 PDF 무료 제공: https://www.jmlr.org/papers/v3/bengio03a.html)
+
+3. Word2Vec (CBOW, Skip-gram)
+
+제목: Efficient Estimation of Word Representations in Vector Space(벡터 공간에서의 단어 표현의 효율적 추정)
+
+저자: Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean
+
+출처: arXiv preprint, arXiv:1301.3781 (2013)
+
+DOI: 없음 (동료 심사를 거친 정식 학술지·학회 논문이 아닌 arXiv 프리프린트)
+
+공개여부: 공개 (arXiv에서 전문 무료 제공: https://arxiv.org/abs/1301.3781)
+
+4. GloVe
+
+제목: GloVe: Global Vectors for Word Representation(글로브: 단어 표현을 위한 전역 벡터)
+
+저자: Jeffrey Pennington, Richard Socher, Christopher D. Manning
+
+출처: Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 1532–1543 (2014)
+
+DOI: https://doi.org/10.3115/v1/D14-1162
+
+공개여부: 공개 (ACL Anthology에서 전문 PDF 무료 제공: https://aclanthology.org/D14-1162/)
+
+5. 오토인코더
+
+제목: Reducing the Dimensionality of Data with Neural Networks(신경망을 이용한 데이터 차원 축소)
+
+저자: Geoffrey E. Hinton, Ruslan R. Salakhutdinov
+
+출처: Science, Vol. 313, No. 5786, pp. 504–507 (2006)
+
+DOI: https://doi.org/10.1126/science.1127647
+
+공개여부: 공개 (Science 측이 커뮤니티 서비스 차원에서 이 논문을 무료로 공개하고 있음: https://www.science.org/doi/10.1126/science.1127647)
+
+3부
+
+2012년 가을, 이미지넷 이미지 인식 대회의 결과가 공개되자 컴퓨터 비전 연구자들이 술렁였다. 제프리 힌턴의 연구실에서 나온 알렉스넷이 2위와 큰 격차를 벌리며 우승했기 때문이다. 그동안 조금씩 줄여 오던 오류율을 단숨에 끌어내린 비결은 신경망을 더 깊게 쌓고 두 대의 GPU로 학습시킨 것이었다. 이 사건은 딥러닝 시대의 본격적인 출발을 알리는 신호탄이 되었다.
+
+앞서 이미 정리해드린 논문과 동일합니다.
+
+제목: ImageNet Classification with Deep Convolutional Neural Networks(깊은 합성곱 신경망을 이용한 이미지넷 분류)
+
+저자: Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton
+
+출처: Advances in Neural Information Processing Systems (NeurIPS), Vol. 25, pp. 1097–1105 (2012)
+
+DOI: 없음 (NeurIPS 2012 proceedings 원본 논문에는 DOI가 부여되어 있지 않음)
+
+공개여부: 공개 (NeurIPS 공식 proceedings 페이지에서 전문 PDF 무료 제공)
+https://proceedings.neurips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
+
+8장
+
+5장에서 합성곱 신경망이 계층을 거듭할수록 저수준 특징에서 고수준 특징으로 점점 더 깊이 있는 특징을 뽑아낸다는 점을 살펴봤다. 연구자들은 계층을 더 깊게 쌓을수록 모델의 성능이 비약적으로 좋아질 것으로 추정했다. 이 추정은 2012년 알렉스 크리제프스키Alex Krizhevsky, 일리야 서츠케버Ilya Sutskever가 지도 교수인 제프리 힌턴과 함께 만든 AlexNet이 이미지 인식 대회에서 압도적인 성능으로 우승하면서 확신으로 바뀌었다. 학습 가능한 계층 8개로 이루어진 AlexNet은 병렬 하드웨어 가속기와 ReLU 활성화 함수로 학습 속도를 높였고, 드롭아웃으로 과적합을 막았다. 이렇게 깊은 신경망도 효율적으로 학습할 수 있음을 입증하며 딥러닝 붐의 일등 공신이 되었다. 참고로 5-3절의 CIFAR-10 이미지 분류 모델은 바로 AlexNet의 구조를 차용해 만든 합성곱 신경망 모델이다.
+
+제목: ImageNet Classification with Deep Convolutional Neural Networks(깊은 합성곱 신경망을 이용한 이미지넷 분류)
+
+저자: Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton
+
+출처: Advances in Neural Information Processing Systems (NeurIPS), Vol. 25, pp. 1097–1105 (2012)
+
+DOI: 없음 (NeurIPS 2012 proceedings 원본 논문에는 DOI가 부여되어 있지 않음)
+
+공개여부: 공개 (NeurIPS 공식 proceedings 페이지에서 전문 PDF 무료 제공)
+https://proceedings.neurips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
+
+VGGNet -> 동일
+
+그런데 연구자들이 VGGNet 구조를 더 깊게 확장하자 새로운 문제가 드러났다. 20층 모델과 56층 모델을 비교했더니 오히려 56층 모델이 훈련 데이터셋에서조차 성능이 떨어진 것이다. 범인은 단순히 깊게만 쌓아서는 깊이의 이점을 살리지 못하는 문제였다. 이 문제는 2015년 마이크로소프트 연구소의 카이밍 허Kaiming He 등이 개발한 ResNet이 해결해 그해 이미지 인식 대회를 휩쓸었다.
+
+제목: Deep Residual Learning for Image Recognition(이미지 인식을 위한 깊은 잔차 학습)
+
+저자: Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+
+출처: 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 770–778 (2016)
+
+DOI: https://doi.org/10.1109/CVPR.2016.90
+
+공개여부: 비공개 (IEEE Xplore 유료 접근. 다만 arXiv 프리프린트로는 무료 열람 가능: arXiv:1512.03385, https://arxiv.org/abs/1512.03385)
+
+8.2
+
+배치 정규화는 2015년 구글의 세르게이 이오페Sergey Ioffe와 크리스천 세게디Christian Szegedy가 발표했다.  아이러니하게도 이미지 인식 대회에서 VGGNet을 누르고 우승한 GoogLeNet의 연구진이, 정작 본인들의 모델은 복잡한 구조 탓에 유명세에서 밀리는 동안 경쟁 모델인 VGGNet의 보급에 크게 기여한 배치 정규화를 함께 개발했다는 점은 무척 흥미롭다.
+
+제목: Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift(배치 정규화: 내부 공변량 이동을 줄여 깊은 신경망 학습 가속화)
+
+저자: Sergey Ioffe, Christian Szegedy
+
+출처: Proceedings of the 32nd International Conference on Machine Learning (ICML), PMLR, Vol. 37, pp. 448–456 (2015)
+
+DOI: 없음 (PMLR 게재 논문으로 DOI가 부여되지 않음)
+
+공개여부: 공개 (PMLR 공식 사이트에서 전문 PDF 무료 제공: https://proceedings.mlr.press/v37/ioffe15.html)
+
+9장
+
+AlexNet 개발에 참여한 일리야 서츠케버의 다음 도전은 자연어 처리, 특히 기계 번역 문제였다. 한 언어의 문장을 다른 언어로 옮기는 번역 모델은 입력과 출력의 길이와 순서가 어긋나는, 당시 순환 신경망 모델로 해결하기에 가장 까다로운 문제였다. 2014년 6월, 몬트리올 대학의 조경현 등은 단순 RNN으로 만든 두 순환 신경망을 각각 인코더와 디코더로 나란히 배치한 모델을 발표했고 , 9월에 서츠케버 등은 거의 같은 구조의 LSTM을 사용하는 모델을 발표했다.  각자 출발한 두 연구는 두 순환 신경망을 콘텍스트 벡터라는 좁은 통로로 이으면 된다는 같은 결론에 도달했다.
+두 개의 신경망을 연결한다는 단순한 아이디어로 만들어진 이들 모델은 기계 번역에서 곧장 두각을 나타냈고, 시퀀스 투 시퀀스, 줄여서 Seq2Seq라는 이름으로 널리 알려졌다. 하지만 성능만큼이나 한계도 명확했다. 핵심 정보가 모이는 인코더와 디코더 사이의 통로가 좁다 보니 입력 문장이 길어질수록 성능이 급격하게 떨어졌다.
+이듬해 디미트리 바다나우Dzmitry Bahdanau와 조경현 등은 이 한계를 해결하는 새로운 방법인 어텐션 메커니즘을 고안했다.  매 출력 토큰을 생성할 때마다 입력 순차 데이터의 어느 부분에 집중할지를 모델이 스스로 결정하게 만드는 방식이었다. 콘텍스트 벡터라는 좁은 통로는 어텐션이라는 넓은 창문으로 바뀌었고, 덕분에 기계 번역을 비롯한 자연어 처리 모델 성능은 한 단계 도약했다. 
+
+1. Cho et al. (2014) — RNN 인코더-디코더
+
+앞서 정리해드린 논문과 동일합니다.
+
+제목: Learning Phrase Representations Using RNN Encoder-Decoder for Statistical Machine Translation(RNN 인코더-디코더를 이용한 통계적 기계 번역의 구절 표현 학습)
+
+저자: Kyunghyun Cho, Bart van Merriënboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, Yoshua Bengio
+
+출처: Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 1724–1734 (2014)
+
+DOI: https://doi.org/10.3115/v1/D14-1179
+
+공개여부: 공개 (ACL Anthology: https://aclanthology.org/D14-1179/)
+
+2. Sutskever, Vinyals, & Le (2014) — Seq2Seq
+
+제목: Sequence to Sequence Learning with Neural Networks(신경망을 이용한 시퀀스 투 시퀀스 학습)
+
+저자: Ilya Sutskever, Oriol Vinyals, Quoc V. Le
+
+출처: Advances in Neural Information Processing Systems (NeurIPS), Vol. 27, pp. 3104–3112 (2014)
+
+DOI: 없음 (NeurIPS proceedings 원본 논문에는 DOI가 부여되어 있지 않음)
+
+공개여부: 공개 (NeurIPS 공식 proceedings 페이지에서 전문 PDF 무료 제공: https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf)
+
+3. Bahdanau, Cho, & Bengio (2015) — 어텐션 메커니즘
+
+제목: Neural Machine Translation by Jointly Learning to Align and Translate(정렬과 번역을 함께 학습하는 신경망 기계 번역)
+
+저자: Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio
+
+출처: International Conference on Learning Representations (ICLR) 2015
+
+DOI: 없음 (ICLR은 오픈 리뷰(OpenReview) 기반 학회로 정식 proceedings에 DOI를 부여하지 않음)
+
+공개여부: 공개 (arXiv 프리프린트로 무료 열람 가능: arXiv:1409.0473, https://arxiv.org/abs/1409.0473)
+
+크기 조정 내적 어텐션 메커니즘
+크기 조정 내적 어텐션(scaled dot-product attention) 메커니즘
+9-3절에서 소개한 바다나우 어텐션 외에도 다양한 어텐션 메커니즘이 있다. 그중 크기 조정 내적 어텐션은 바다나우 어텐션과 함께 가장 널리 사용되는 방식으로, 대부분의 언어 모델의 핵심 구조인 트랜스포머는 크기 조정 내적 어텐션을 사용해 동작한다. 
+크기 조정 내적 어텐션은 두 벡터의 내적 연산만으로 학습 없이 어텐션 에너지와 점수를 계산한다. 내적은 두 벡터가 얼마나 같은 방향을 가리키는지를 측정하는 연산으로, 방향이 비슷할수록 큰 값이 나온다. 여기에 벡터의 차원이 커질수록 내적값도 함께 커지는 경향이 있어, 지나치게 커지지 않도록 크기를 조정하기 때문에 '크기 조정 내적'이라 명명되었다. 이 단계까지 학습 가능한 계층이 없다는 점이 바다나우 어텐션과 가장 큰 차이로, 구조가 단순하고 계산 효율이 높다는 장점이 있다. 다만 두 벡터의 차원이 같아야만 내적 연산이 가능하므로, 크기가 다른 두 벡터를 결합해야 한다면 더 유연한 바다나우 어텐션이 적합하다.
+다음 장에서 소개하는 트랜스포머 모델은 파이토치의 nn.MultiheadAttention 계층을 사용해 어텐션을 구현한다. 어텐션 계산 과정이 계층 내부에 추상화되어 있어 코드에서 직접 보이지는 않지만, 내부적으로는 크기 조정 내적 어텐션을 기반으로 동작한다.
+
+제목: Attention Is All You Need(어텐션이 필요한 전부다)
+
+저자: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin
+
+출처: Advances in Neural Information Processing Systems (NeurIPS), Vol. 30, pp. 5998–6008 (2017)
+
+DOI: 없음 (NeurIPS proceedings 원본 논문에는 DOI가 부여되어 있지 않음)
+
+공개여부: 공개 (NeurIPS 공식 proceedings 페이지 및 arXiv에서 무료 열람 가능: arXiv:1706.03762)
+
+더공부
+
+대표적인 회의론은 Jain & Wallace (2019)의 <Attention is not Explanation>이며, 이에 대한 반론으로 Wiegreffe & Pinter (2019)의 <Attention is not not Explanation>도 함께 읽어 볼 만하다.
+
+1. Jain & Wallace (2019)
+
+제목: Attention Is Not Explanation(어텐션은 설명이 아니다)
+
+저자: Sarthak Jain, Byron C. Wallace
+
+출처: Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT), Vol. 1, pp. 3543–3556 (2019)
+
+DOI: https://doi.org/10.18653/v1/N19-1357
+
+공개여부: 공개 (ACL Anthology: https://aclanthology.org/N19-1357/)
+
+2. Wiegreffe & Pinter (2019)
+
+제목: Attention Is Not Not Explanation(어텐션은 설명이 아닌 게 아니다)
+
+저자: Sarah Wiegreffe, Yuval Pinter
+
+출처: Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), pp. 11–20 (2019)
+
+DOI: https://doi.org/10.18653/v1/D19-1002
+
+공개여부: 공개 (ACL Anthology: https://aclanthology.org/D19-1002/)
+
+
+10장
+
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin, 'Attention Is All You Need', Advances in Neural Information Processing Systems 30, 2017
+
+제목: Attention Is All You Need(어텐션이 필요한 전부다)
+
+저자: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin
+
+출처: Advances in Neural Information Processing Systems (NeurIPS), Vol. 30, pp. 5998–6008 (2017)
+
+DOI: 없음 (NeurIPS proceedings 원본 논문에는 DOI가 부여되어 있지 않음)
+
+공개여부: 공개 (NeurIPS 공식 proceedings 페이지 및 arXiv에서 무료 열람 가능: arXiv:1706.03762)
+
+
+흥미로운 점은, 인코더와 디코더를 온전히 갖춘 원래 구조가 아닌 그 일부만 활용해 만든 모델로 트랜스포머가 진정한 성공 가도에 올라섰다는 사실이다. 2018년 구글의 제이콥 데블린Jacob Devlin과 동료들은 인코더만 사용하는 BERT 를, 같은 해 OpenAI의 알렉 래드포드Alec Radford와 동료들은 디코더만 사용하는 GPT 를 발표하며 트랜스포머의 활용 방식 두 가지를 정착시켰다. 오늘날 일상에서 마주치는 거의 모든 대규모 언어 모델은 이 두 갈래 중 하나며, 그중에서도 디코더 계열 GPT의 성공이 두드러진다. 
+
+1. BERT
+
+제목: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding(BERT: 언어 이해를 위한 깊은 양방향 트랜스포머의 사전 학습)
+
+저자: Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova
+
+출처: Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT), Vol. 1, pp. 4171–4186 (2019)
+
+DOI: https://doi.org/10.18653/v1/N19-1423
+
+공개여부: 공개 (ACL Anthology: https://aclanthology.org/N19-1423/)
+
+2. GPT-1
+
+제목: Improving Language Understanding by Generative Pre-Training(생성적 사전 학습을 통한 언어 이해 개선)
+
+저자: Alec Radford, Karthik Narasimhan, Tim Salimans, Ilya Sutskever
+
+출처: OpenAI Technical Report (2018)
+
+DOI: 없음 (정식 학술지·학회 논문이 아닌 OpenAI 자체 기술 보고서)
+
+공개여부: 공개 (OpenAI 공식 사이트에서 PDF 무료 제공: https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
+
+11장
+
+2013년 암스테르담 대학교의 디더릭 킹마Diederik P. Kingma와 막스 벨링Max Welling은 이 문제를 해결하기 위한 새로운 아이디어를 제안했다. 핵심은 잠재 벡터를 '고정된 한 점'이 아니라 '일정한 범위 안의 한 점'으로 인코딩하자는 것이다.
+
+제목: Auto-Encoding Variational Bayes(변분 베이즈 오토인코딩)
+
+저자: Diederik P. Kingma, Max Welling
+
+출처: International Conference on Learning Representations (ICLR) 2014 (arXiv 최초 게재: 2013)
+
+DOI: 없음 (ICLR은 오픈리뷰 기반 학회로 정식 proceedings에 DOI를 부여하지 않음)
+
+공개여부: 공개 (arXiv 프리프린트로 무료 열람 가능: arXiv:1312.6114, https://arxiv.org/abs/1312.6114)
+
+GAN
+
+제목: Generative Adversarial Networks(생성적 적대 신경망)
+
+저자: Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio
+
+출처: Advances in Neural Information Processing Systems (NeurIPS), Vol. 27, pp. 2672–2680 (2014)
+
+DOI: 없음 (NeurIPS proceedings 원본 논문에는 DOI가 부여되어 있지 않음)
+
+공개여부: 공개 (NeurIPS 공식 proceedings 페이지 및 arXiv에서 무료 열람 가능: arXiv:1406.2661)
+
+DCGAN
+
+제목: Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks(깊은 합성곱 생성적 적대 신경망을 이용한 비지도 표현 학습)
+
+저자: Alec Radford, Luke Metz, Soumith Chintala
+
+출처: International Conference on Learning Representations (ICLR) 2016 (arXiv 최초 게재: 2015)
+
+DOI: 없음 (ICLR은 오픈리뷰 기반 학회로 정식 proceedings에 DOI를 부여하지 않음)
+
+공개여부: 공개 (arXiv 프리프린트로 무료 열람 가능: arXiv:1511.06434)
+
+스타일 전이
+
+제목: Image Style Transfer Using Convolutional Neural Networks(합성곱 신경망을 이용한 이미지 스타일 전이)
+
+저자: Leon A. Gatys, Alexander S. Ecker, Matthias Bethge
+
+출처: 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 2414–2423 (2016)
+
+DOI: https://doi.org/10.1109/CVPR.2016.265
+
+공개여부: 비공개 (IEEE Xplore 유료 접근. 다만 CVF Open Access 페이지에서 전문 무료 제공: https://openaccess.thecvf.com/content_cvpr_2016/html/Gatys_Image_Style_Transfer_CVPR_2016_paper.html)
+
+
+참고로 스타일 전이는 같은 저자들이 몇 달 앞서 발표한 arXiv 프리프린트도 자주 함께 인용됩니다.
+
+Gatys, L. A., Ecker, A. S., & Bethge, M. (2015). A Neural Algorithm of Artistic Style. arXiv:1508.06576.
+
+위 CVPR 2016 논문이 이 프리프린트의 정식 학회 발표판이라, 책에서는 보통 CVPR 2016판을 정식 인용으로 쓰고 필요시 이 프리프린트를 함께 언급합니다.
+
+
+
+
+
+
+
+디퓨전 모델
+
+확산 모델 관련 핵심 논문 두 편으로 정리해드립니다. 텍스트에서 설명하신 노이즈 예측 신경망(U-Net)을 이용한 순방향·역방향 학습 방식은 아래 DDPM 논문에서 확립된 형태이고, 스테이블 디퓨전은 별도 논문(잠재 확산 모델)에서 나왔습니다.
+
+1. DDPM (본문에서 설명한 확산 모델의 표준 정식화)
+
+제목: Denoising Diffusion Probabilistic Models(디노이징 확산 확률 모델)
+
+저자: Jonathan Ho, Ajay Jain, Pieter Abbeel
+
+출처: Advances in Neural Information Processing Systems (NeurIPS), Vol. 33, pp. 6840–6851 (2020)
+
+DOI: 없음 (NeurIPS proceedings 원본 논문에는 DOI가 부여되어 있지 않음)
+
+공개여부: 공개 (NeurIPS 공식 proceedings 페이지 및 arXiv에서 무료 열람 가능: arXiv:2006.11239, https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html)
+
+2. 스테이블 디퓨전 (잠재 확산 모델)
+
+제목: High-Resolution Image Synthesis with Latent Diffusion Models(잠재 확산 모델을 이용한 고해상도 이미지 합성)
+
+저자: Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer
+
+출처: 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 10684–10695 (2022)
+
+DOI: 없음 (CVF Open Access 페이지에서 정식 DOI 없이 게재)
+
+공개여부: 공개 (CVF Open Access: https://openaccess.thecvf.com, arXiv:2112.10752)
+
+참고로 확산 모델의 이론적 뿌리가 된 최초 논문도 함께 언급하실 만합니다.
+
+Sohl-Dickstein, J., Weiss, E., Maheswaranathan, N., & Ganguli, S. (2015). Deep Unsupervised Learning using Nonequilibrium Thermodynamics. Proceedings of the 32nd International Conference on Machine Learning (ICML), 37, 2256–2265.
+
+이 논문이 "노이즈를 점진적으로 더하고 되돌리는" 확산 과정의 개념을 열역학에서 착안해 처음 제안했고, DDPM(2020)이 이를 이미지 생성에 실용적으로 발전시킨 구조입니다. 책의 서술 흐름(순방향/역방향, U-Net 노이즈 예측)에는 DDPM 논문이 직접적으로 대응되지만, 확산 모델의 기원까지 각주로 언급하고 싶으시면 이 논문도 함께 정리해드릴 수 있습니다.
+
+
+13장
+
+1. CLIP
+
+제목: Learning Transferable Visual Models From Natural Language Supervision(자연어 지도를 통한 전이 가능한 시각 모델 학습)
+
+저자: Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever
+
+출처: Proceedings of the 38th International Conference on Machine Learning (ICML), PMLR, Vol. 139, pp. 8748–8763 (2021)
+
+DOI: 없음 (PMLR 게재 논문으로 DOI가 부여되지 않음)
+
+공개여부: 공개 (PMLR 공식 사이트에서 전문 PDF 무료 제공: https://proceedings.mlr.press/v139/radford21a.html, arXiv:2103.00020)
+
+2. BLIP-2
+
+제목: BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models(BLIP-2: 고정된 이미지 인코더와 대규모 언어 모델을 이용한 언어-이미지 사전 학습의 부트스트래핑)
+
+저자: Junnan Li, Dongxu Li, Silvio Savarese, Steven Hoi
+
+출처: Proceedings of the 40th International Conference on Machine Learning (ICML), PMLR, Vol. 202, pp. 19730–19742 (2023)
+
+DOI: 없음 (PMLR 게재 논문으로 DOI가 부여되지 않음)
+
+공개여부: 공개 (PMLR 공식 사이트에서 전문 PDF 무료 제공: https://proceedings.mlr.press/v202/li23q.html, arXiv:2301.12597)
