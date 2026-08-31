@@ -21,7 +21,7 @@
 !/data/**
 
 # --- 5. 개별 예외로 추적하는 문서 -------------------------------------------
-!/downloads/README.md
+!/download/README.md
 !/checkpoint/README.md
 !/code_reference/API.md
 
