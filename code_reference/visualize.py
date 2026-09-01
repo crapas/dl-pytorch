@@ -581,12 +581,33 @@ def plot_activation_compare(activations, *, x_range=(-5, 5), num_points=400,
 # 결정 경계 (1·2장 퍼셉트론 시각화 통합본)
 # ===========================================================================
 
+# ===========================================================================
+# 결정 경계 시각화 폰트 크기
+# ===========================================================================
+
+BOUNDARY_TITLE_SIZE = 14
+"""결정 경계 그림의 제목 크기."""
+
+BOUNDARY_BODY_SIZE = 12
+"""결정 경계 그림의 좌표 텍스트 · 축 라벨 · 범례 크기."""
+
+BOUNDARY_XLABEL_POS = 0.98
+"""x축 라벨의 가로 위치(축 영역 비율). 1.0에 가까울수록 오른쪽 끝."""
+
+BOUNDARY_YLABEL_POS = 0.95
+"""y축 라벨의 세로 위치(축 영역 비율). 1.0에 가까울수록 위쪽 끝."""
+
+BOUNDARY_LABEL_GAP = 0.05
+"""축 선에서 라벨을 띄우는 간격(축 영역 비율). 좌표 텍스트와 겹치지 않도록
+축 선에서 조금 떨어뜨린다. 0이면 축 선에 딱 붙는다."""
+
+
 def _draw_sample_points(ax, sample, sample_name='', font_scale=1.0):
     """sample = (x1_list, x2_list, y_list) 를 정답에 따라 빈 원/채운 원으로 그린다."""
     points = {0: ([], []), 1: ([], [])}
     for x1, x2, y in zip(sample[0], sample[1], sample[2]):
         ax.text(x1 + 0.05, x2 - 0.1, f'({x1}, {x2})',
-                fontsize=10 * font_scale)
+                fontsize=BOUNDARY_BODY_SIZE * font_scale)
         idx = 0 if y < 0.5 else 1
         points[idx][0].append(x1)
         points[idx][1].append(x2)
@@ -595,6 +616,13 @@ def _draw_sample_points(ax, sample, sample_name='', font_scale=1.0):
                label=f'{sample_name} (클래스 0)' if sample_name else '클래스 0')
     ax.scatter(*points[1], marker='o', edgecolor='black', facecolor='black',
                label=f'{sample_name} (클래스 1)' if sample_name else '클래스 1')
+
+
+def _axis_zero_fraction(lim, default=0.5):
+    """축 범위 ``lim`` 안에서 값 0이 놓이는 위치를 축 영역 비율로 환산한다."""
+    if lim is None or lim[1] == lim[0]:
+        return default
+    return (0.0 - lim[0]) / (lim[1] - lim[0])
 
 
 def _apply_decision_boundary_axes(ax, x_lim, y_lim, x_label, y_label,
@@ -610,13 +638,20 @@ def _apply_decision_boundary_axes(ax, x_lim, y_lim, x_label, y_label,
         ax.set_xlim(x_lim)
     if y_lim is not None:
         ax.set_ylim(y_lim)
+    # 두 축 라벨은 축 선(값 0) 위에 놓는다. 축 선의 위치는 x_lim·y_lim 에
+    # 따라 달라지므로 매번 계산한다.
+    x_axis_pos = _axis_zero_fraction(y_lim)   # x축 선의 세로 위치
+    y_axis_pos = _axis_zero_fraction(x_lim)   # y축 선의 가로 위치
     if x_label:
-        ax.set_xlabel(x_label, loc='right', fontsize=10 * font_scale)
-        ax.xaxis.set_label_coords(0.98, 0.14)
+        ax.set_xlabel(x_label, loc='right',
+                      fontsize=BOUNDARY_BODY_SIZE * font_scale)
+        ax.xaxis.set_label_coords(BOUNDARY_XLABEL_POS,
+                                  x_axis_pos + BOUNDARY_LABEL_GAP)
     if y_label:
         ax.set_ylabel(y_label, loc='top', rotation=0,
-                      fontsize=10 * font_scale)
-        ax.yaxis.set_label_coords(0.14, 0.95)
+                      fontsize=BOUNDARY_BODY_SIZE * font_scale)
+        ax.yaxis.set_label_coords(y_axis_pos + BOUNDARY_LABEL_GAP,
+                                  BOUNDARY_YLABEL_POS)
     ax.set_xticks([1])
     ax.set_yticks([1])
     ax.grid(True, linestyle='--', alpha=0.7)
@@ -640,7 +675,8 @@ def plot_decision_boundary(sample, *, boundary_fn=None, params=None,
         show_legend: 범례 표시 여부.
         figsize: 그림 크기.
         font_scale: 모든 텍스트(제목·좌표·축·범례)에 적용할 폰트 크기 배율.
-            1.0이 기본.
+            1.0이 기본. 제목과 본문의 기준 크기는 모듈 변수
+            ``BOUNDARY_TITLE_SIZE`` · ``BOUNDARY_BODY_SIZE`` 로 조정한다.
     """
     set_korean_plot_env()
     if boundary_fn is not None and params is not None:
@@ -670,9 +706,10 @@ def plot_decision_boundary(sample, *, boundary_fn=None, params=None,
 
     if show_legend:
         ax.legend(loc='upper right', bbox_to_anchor=(1, 1),
-                  fontsize=10 * font_scale)
+                  fontsize=BOUNDARY_BODY_SIZE * font_scale)
     if title:
-        ax.set_title(title, pad=15, fontsize=20 * font_scale)
+        ax.set_title(title, pad=15,
+                     fontsize=BOUNDARY_TITLE_SIZE * font_scale)
 
     _finalize(fig)
 
