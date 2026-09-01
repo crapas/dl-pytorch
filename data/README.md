@@ -7,9 +7,9 @@
 | 디렉터리 | 내용 | 깃 추적 |
 |---------|------|--------|
 | **`data/`** (이 디렉터리) | 저자가 제공하는 작은 예제 파일 (CSV, 이미지, 텍스트) | ✓ 추적 |
-| `downloads/` | torchvision · HuggingFace 등이 자동으로 받는 데이터, 사용자가 직접 받는 대형 데이터 | ✗ 제외 |
+| `download/` | torchvision · HuggingFace 등이 자동으로 받는 데이터, 사용자가 직접 받는 대형 데이터 | ✗ 제외 |
 
-자동 다운로드되는 데이터셋(MNIST, FashionMNIST, CIFAR-10 등)이나 수동 다운로드 대형 데이터(GloVe 등)는 `../downloads/` 를 사용한다. 본 README 의 자매 문서 `../downloads/README.md` 참조.
+자동 다운로드되는 데이터셋(MNIST, FashionMNIST, CIFAR-10 등)이나 수동 다운로드 대형 데이터(GloVe 등)는 `../download/` 를 사용한다. 본 README 의 자매 문서 `../download/README.md` 참조.
 
 ## 포함된 파일
 

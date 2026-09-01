@@ -28,7 +28,7 @@
 │   ├── ch3_spiral_data.csv
 │   ├── alice_in_wonderland.txt
 │   └── ...
-├── downloads/               # 자동·외부 다운로드 데이터 (깃 추적 제외)
+├── download/                # 자동·외부 다운로드 데이터 (깃 추적 제외)
 │   ├── README.md
 │   ├── MNIST/ FashionMNIST/ ...   # torchvision 자동 다운로드
 │   └── glove.6B.100d.txt          # 수동 다운로드
@@ -36,19 +36,19 @@
     └── README.md
 ```
 
-**`data/` vs `downloads/` 분리**
+**`data/` vs `download/` 분리**
 
 - `data/` — 저자가 제공하는 작은 예제 파일(CSV, 이미지, 텍스트). 깃 저장소에 함께 들어 있다.
-- `downloads/` — torchvision · HuggingFace 등이 자동으로 받는 데이터셋과 사용자가 별도로 받아 두는 대형 외부 데이터. 디렉터리 내용은 `.gitignore` 로 추적에서 제외되며 첫 노트북 실행 시 자동 생성된다.
+- `download/` — torchvision · HuggingFace 등이 자동으로 받는 데이터셋과 사용자가 별도로 받아 두는 대형 외부 데이터. 디렉터리 내용은 `.gitignore` 로 추적에서 제외되며 첫 노트북 실행 시 자동 생성된다.
 - `checkpoint/` — 노트북이 저장하는 모델 파라미터와 미세조정 산출물. 역시 `.gitignore` 로 추적에서 제외된다.
 
-`code_examples/` 와 `exercises/` 아래에는 노트북(`.ipynb`) 외의 파일이 생기지 않는다. 내려받은 데이터는 `downloads/`, 학습 산출물은 `checkpoint/` 로 모이도록 모든 노트북의 경로를 통일했다.
+`code_examples/` 와 `exercises/` 아래에는 노트북(`.ipynb`) 외의 파일이 생기지 않는다. 내려받은 데이터는 `download/`, 학습 산출물은 `checkpoint/` 로 모이도록 모든 노트북의 경로를 통일했다.
 
 노트북에서는 두 경로를 명시적으로 구분해 사용한다:
 
 ```python
 # 자동 다운로드 (예: MNIST)
-datasets.MNIST(root='../../downloads', train=True, download=True, transform=...)
+datasets.MNIST(root='../../download', train=True, download=True, transform=...)
 
 # 저자 제공 (예: 회오리 CSV)
 with open('../../data/ch3_spiral_data.csv') as f:
