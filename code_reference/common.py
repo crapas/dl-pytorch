@@ -391,6 +391,10 @@ def _format_duration(seconds):
     return f'{minutes}:{secs:02d}'
 
 
+EPOCH_COLUMN_NAME = '에포크'
+"""학습 로그 표의 첫 열(에포크) 머리말."""
+
+
 class EpochLogger:
     """학습 로그를 표로 출력하고, 손실 이력을 모아 학습 곡선까지 그린다.
 
@@ -449,12 +453,13 @@ class EpochLogger:
         self._elapsed = None       # summary() 시 전체 학습 시간(초) 보관
         self._header_done = False
 
-        self._epoch_w = max(_disp_width(f'{self.epochs}/{self.epochs}'), 5)
+        self._epoch_w = max(_disp_width(f'{self.epochs}/{self.epochs}'),
+                            _disp_width(EPOCH_COLUMN_NAME))
         self._col_w = [max(_disp_width(c), 11) for c in self.columns]
         self._time_w = max(_disp_width('시간'), 7)
 
     def _print_header(self):
-        cells = [_pad('epoch', self._epoch_w)]
+        cells = [_pad(EPOCH_COLUMN_NAME, self._epoch_w)]
         cells += [_pad(c, w) for c, w in zip(self.columns, self._col_w)]
         if self.show_time:
             cells.append(_pad('시간', self._time_w))
