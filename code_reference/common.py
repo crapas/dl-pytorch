@@ -139,9 +139,11 @@ def check_colab():
 def set_korean_plot_env():
     """matplotlib 시각화에 한글 표기를 위해 폰트를 지정한다.
 
-    윈도는 맑은 고딕, 맥오에스는 애플 고딕, 리눅스/콜랩은 나눔 고딕을 가정한다.
-    폰트가 설치되지 않은 경우 코랩 환경이면 자동 설치하고, 그 외에는
-    FileNotFoundError를 발생시킨다.
+    윈도는 맑은 고딕, 맥오에스는 애플 고딕, 리눅스(콜랩 포함)는 나눔 고딕을
+    가정한다. 리눅스에서 폰트가 설치되지 않은 경우 비밀번호 없는 sudo 권한
+    (콜랩이 대표적이며, 로컬 리눅스도 설정되어 있으면 동일하게 동작)으로
+    자동 설치를 시도한다. 자동 설치에 실패하면(비밀번호가 필요한 sudo 등)
+    FileNotFoundError를 발생시켜 수동 설치 명령을 안내한다.
     """
     font_names = {
         'win32': 'Malgun Gothic',
@@ -155,29 +157,54 @@ def set_korean_plot_env():
     font_list = [f.name for f in fm.fontManager.ttflist]
 
     if font_name not in font_list:
-        if check_colab():
-            # 구글 코랩: 나눔 폰트 설치 후 노트북 세션 재시작 필요
-            try:
-                subprocess.run(
-                    ['sudo', 'apt-get', 'install', '-y', 'fonts-nanum'],
-                    check=True,
-                )
-                subprocess.run(['sudo', 'fc-cache', '-fv'], check=True)
-                cache_dir = os.path.expanduser('~/.cache/matplotlib')
-                if os.path.exists(cache_dir):
-                    subprocess.run(['rm', '-rf', cache_dir], check=True)
-                    print('폰트 설치를 마쳤습니다. 노트북 세션을 다시 시작하세요.')
-            except subprocess.CalledProcessError as e:
-                print(f'폰트 설치 중 오류 발생: {e}')
-                raise
-        else:
+        if sys.platform == 'linux' and _install_nanum_font_linux():
             raise FileNotFoundError(
-                f'{sys.platform} 운영체제에서 {font_name} 폰트를 찾을 수 없습니다. '
-                '해당 폰트를 설치하고 커널을 재시작한 후 다시 시도하세요.'
+                '나눔 고딕 폰트를 설치했습니다. 노트북 커널을 다시 시작한 후 다시 시도하세요.'
             )
+        message = (
+            f'{sys.platform} 운영체제에서 {font_name} 폰트를 찾을 수 없습니다. '
+            '해당 폰트를 설치하고 커널을 재시작한 후 다시 시도하세요.'
+        )
+        if sys.platform == 'linux':
+            message += (
+                '\n(비밀번호 없는 sudo 권한이 없어 자동 설치에 실패했습니다. '
+                '터미널에서 다음을 직접 실행하세요: '
+                'sudo apt-get install -y fonts-nanum && fc-cache -fv)'
+            )
+        raise FileNotFoundError(message)
     else:
         plt.rc('font', family=font_name)
         plt.rcParams['axes.unicode_minus'] = False
+
+
+def _install_nanum_font_linux():
+    """리눅스에서 나눔 고딕 폰트 설치를 시도한다.
+
+    비밀번호를 입력할 TTY가 없는 노트북 커널 환경을 가정해, 비밀번호 없는
+    sudo(`sudo -n`)만 시도한다. 콜랩은 기본적으로 비밀번호 없이 sudo가
+    동작해 자동 설치되고, 로컬 리눅스(WSL 포함)는 NOPASSWD sudo가 설정된
+    경우에만 자동 설치되며, 그렇지 않으면 조용히 실패해 호출부에서 수동
+    설치 안내로 넘어간다.
+
+    반환
+        bool. 설치(및 폰트 캐시 갱신)에 성공하면 True, 실패하면 False.
+    """
+    try:
+        subprocess.run(
+            ['sudo', '-n', 'apt-get', 'install', '-y', 'fonts-nanum'],
+            check=True, capture_output=True,
+        )
+        subprocess.run(
+            ['sudo', '-n', 'fc-cache', '-fv'],
+            check=True, capture_output=True,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return False
+
+    cache_dir = os.path.expanduser('~/.cache/matplotlib')
+    if os.path.exists(cache_dir):
+        subprocess.run(['rm', '-rf', cache_dir], check=True)
+    return True
 
 
 # ---------------------------------------------------------------------------
