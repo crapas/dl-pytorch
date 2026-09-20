@@ -25,6 +25,10 @@
 !/checkpoint/README.md
 !/code_reference/API.md
 
+# 심화 학습 자료 — 설명 문서와 그림 (노트북은 위 *.ipynb 규칙으로 이미 추적)
+!/articles/**/*.md
+!/articles/**/figures/*.png
+
 # GitHub Pages 리다이렉트 페이지 (짧은 주소 -> 노트북)
 !/docs/**
 
