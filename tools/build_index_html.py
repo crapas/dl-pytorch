@@ -25,14 +25,18 @@ def split_row(line):
 
 
 def clean(text):
-    """표 셀에서 마크다운 강조와 코드 표기를 걷어 낸다."""
-    text = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
-    return text.replace('`', '').strip()
+    """표 셀에서 마크다운 강조만 걷어 낸다(백틱은 코드 표시에 쓰므로 남긴다)."""
+    return re.sub(r'\*\*(.+?)\*\*', r'\1', text).strip()
+
+
+def plain(text):
+    """백틱까지 걷어 낸 순수 텍스트(검색용, 이름 필드용)."""
+    return clean(text).replace('`', '')
 
 
 def parse_sections(cell):
     """'2-3, 3-2' 같은 절 표기를 리스트로 나눈다."""
-    return [s.strip() for s in clean(cell).split(',') if s.strip()]
+    return [s.strip() for s in plain(cell).split(',') if s.strip()]
 
 
 def parse_api_abc(path):
@@ -44,11 +48,11 @@ def parse_api_abc(path):
         cells = split_row(line)
         if len(cells) < 3 or cells[1] == 'API':
             continue
-        if clean(cells[0]):
-            letter = clean(cells[0])
+        if plain(cells[0]):
+            letter = plain(cells[0])
         rows.append({
             'letter': letter,
-            'name': clean(cells[1]),
+            'name': plain(cells[1]),
             'sections': parse_sections(cells[2]),
         })
     return rows
@@ -67,12 +71,12 @@ def parse_api_pkg(path):
         cells = split_row(line)
         if len(cells) < 4 or cells[1] == '이름':
             continue
-        if clean(cells[0]):
-            kind = clean(cells[0])
+        if plain(cells[0]):
+            kind = plain(cells[0])
         rows.append({
             'group': group,
             'kind': kind,
-            'name': clean(cells[1]),
+            'name': plain(cells[1]),
             'sections': parse_sections(cells[2]),
             'desc': clean(cells[3]),
         })
@@ -93,7 +97,7 @@ def parse_models(path):
         if len(cells) < 4 or cells[0] == '모델':
             continue
         if clean(cells[0]):
-            num, name = clean(cells[0]), clean(cells[1])
+            num, name = plain(cells[0]), clean(cells[1])
         rows.append({
             'part': part,
             'num': num,
@@ -154,7 +158,11 @@ th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid var(-
 th { font-weight: 600; font-size: .82rem; color: var(--muted);
   position: sticky; top: 5.4rem; background: var(--bg); }
 tbody tr:hover { background: var(--chip); }
-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, "D2Coding", monospace;
+  font-size: .88em; }
+td code { background: var(--chip); padding: .05rem .25rem; border-radius: 3px; }
+td:nth-child(2) > code { background: none; padding: 0; }
+.grp code { background: none; padding: 0; }
 .sec { display: inline-block; margin-right: .3rem; font-size: .82rem;
   padding: .05rem .4rem; border-radius: 4px; background: var(--chip);
   color: var(--accent); text-decoration: none; white-space: nowrap; }
@@ -239,6 +247,15 @@ function mark(text, needle) {
        + '</mark>' + safe.slice(i + needle.length);
 }
 
+// 백틱으로 감싼 부분을 <code>로 바꾼다.
+// 조각별로 이스케이프와 하이라이트를 적용하므로 태그가 깨지지 않는다.
+function fmt(text, needle) {
+  return String(text).split('`').map((part, i) => {
+    const html = mark(part, needle);
+    return i % 2 ? '<code>' + html + '</code>' : html;
+  }).join('');
+}
+
 function render() {
   const needle = q.value.trim().toLowerCase();
   const rows = DATA[tab].filter(r => hit(r, needle));
@@ -264,12 +281,12 @@ function render() {
     for (const r of rows) {
       if (r.group !== group) {
         group = r.group;
-        html += `<tr><td class="grp" colspan="4">${esc(r.group)}</td></tr>`;
+        html += `<tr><td class="grp" colspan="4">${fmt(r.group, '')}</td></tr>`;
       }
       html += `<tr><td>${esc(r.kind)}</td>`
            + `<td><code>${mark(r.name, needle)}</code></td>`
            + `<td>${secLinks(r.sections)}</td>`
-           + `<td>${mark(r.desc, needle)}</td></tr>`;
+           + `<td>${fmt(r.desc, needle)}</td></tr>`;
     }
   } else {
     html = '<table><thead><tr><th style="width:3rem">모델</th><th style="width:14rem">이름</th>'
@@ -282,7 +299,7 @@ function render() {
       html += `<tr><td><b>${esc(r.num)}</b></td>`
            + `<td>${mark(r.name, needle)}</td>`
            + `<td>${secLinks(r.sections)}</td>`
-           + `<td>${mark(r.desc, needle)}</td></tr>`;
+           + `<td>${fmt(r.desc, needle)}</td></tr>`;
     }
   }
   view.innerHTML = html + '</tbody></table>';
@@ -314,10 +331,10 @@ def main():
         r['_hay'] = ' '.join([r['name']] + r['sections']).lower()
     for r in pkg:
         r['_hay'] = ' '.join([r['group'], r['kind'], r['name'], r['desc']]
-                             + r['sections']).lower()
+                             + r['sections']).replace('`', '').lower()
     for r in models:
         r['_hay'] = ' '.join([r['part'], r['num'], r['name'], r['desc']]
-                             + r['sections']).lower()
+                             + r['sections']).replace('`', '').lower()
 
     data = {'abc': abc, 'pkg': pkg, 'model': models}
     html = TEMPLATE.replace('__DATA__', json.dumps(data, ensure_ascii=False))
