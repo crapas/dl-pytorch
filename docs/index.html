@@ -28,7 +28,10 @@ body {
 h1 { font-size: 1.45rem; margin: 0 0 .5rem; }
 .lead { color: var(--muted); font-size: .92rem; margin: 0 0 .6rem; }
 a { color: var(--accent); }
-.find { margin: 0 0 1.8rem; font-size: .92rem; }
+.find { margin: 0 0 .5rem; font-size: .92rem; }
+.find + .find { margin-bottom: 1.8rem; }
+.find code { font-family: ui-monospace, SFMono-Regular, Menlo, "D2Coding", monospace;
+  font-size: .9em; background: var(--chip); padding: .05rem .25rem; border-radius: 3px; }
 .prolog { margin: 0 0 2rem; padding: .7rem .9rem; background: var(--chip);
   border-radius: 8px; font-size: .95rem; }
 h2 { font-size: 1.02rem; margin: 2rem 0 .1rem; padding-bottom: .35rem;
@@ -55,6 +58,8 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
 <a href="https://github.com/crapas/dl-pytorch">github.com/crapas/dl-pytorch</a>입니다.</p>
 <p class="find"><a href="api-index/"><b>찾아보기</b></a> — 본문과 예제 코드에 등장하는
 파이토치 API와 예제 모델을 이름, 설명, 절 번호로 검색할 수 있습니다.</p>
+<p class="find"><a href="https://github.com/crapas/dl-pytorch/blob/main/code_reference/API.md"><b>공통 라이브러리 API</b></a> — 노트북이 함께 쓰는 헬퍼(<code>common</code>,
+<code>viz</code>)의 함수 목록입니다. 책의 학습 대상은 아니며, 인자가 궁금할 때만 보면 됩니다.</p>
 
 <p class="prolog"><a href="https://github.com/crapas/dl-pytorch/tree/main/articles/prolog"><b>[프롤로그] 실습 환경과 사전 지식</b></a></p>
 

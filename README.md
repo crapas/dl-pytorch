@@ -10,6 +10,7 @@
 ├── requirements.txt         # 모든 노트북의 공통 의존성
 ├── code_reference/          # 공통 라이브러리 (importable)
 │   ├── __init__.py
+│   ├── API.md               # 공통 라이브러리 API 문서
 │   ├── common.py            # 환경 / 평가 / 파라미터 / 시간 / GPU 헬퍼
 │   └── visualize.py         # 시각화 헬퍼 (별칭: viz)
 ├── code_examples/           # 본문 예제 노트북 (절 단위)
@@ -213,6 +214,22 @@ Mac · CPU 전용 환경에서는 설치는 되어도 4비트 연산이 동작�
 | 8장 | `timm`, `kagglehub` |
 | 12장 | `transformers`, `datasets`, `peft`, `trl`, `bitsandbytes`, `sentence-transformers`, `groq` |
 | 13장 | `transformers`, `datasets`, `pillow` |
+
+## 공통 라이브러리는 무엇인가
+
+`code_reference/` 는 이 책의 노트북들이 함께 쓰는 헬퍼 모음이다. 학습 곡선을 그리고,
+장치를 고르고, 에포크마다 손실을 기록하는 것처럼 절마다 되풀이되는 코드를 한곳에 모아
+두었다. 본문이 딥러닝 자체에 집중할 수 있게 하려는 장치다.
+
+**책의 학습 대상이 아니다.** 여기 있는 함수의 이름이나 인자를 외울 필요는 없다. 몰라도
+책을 읽고 예제를 실행하는 데 지장이 없다.
+
+다만 본문 코드와 노트북 코드가 달라 보이는 지점이 여기서 생긴다. 본문은 개념을 드러내려고
+과정을 펼쳐 쓴 곳이 있고, 노트북은 같은 일을 헬퍼 한 줄로 처리한 곳이 있다. 노트북에서
+`common` 이나 `viz` 로 시작하는 호출을 만나면 그런 자리라고 보면 된다.
+
+함수의 인자나 반환값이 궁금할 때는 [code_reference/API.md](code_reference/API.md) 를 보면
+된다. 두 모듈의 공개 함수 전체를 설명과 함께 정리해 두었다.
 
 ## 공통 라이브러리 사용 패턴
 
