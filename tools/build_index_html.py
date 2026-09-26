@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent.parent
 API_ABC = ROOT / 'articles/api-index/README.md'
 API_PKG = ROOT / 'articles/api-index/API별_설명.md'
 MODELS = ROOT / 'articles/model-index/README.md'
-OUT = ROOT / 'docs/find/index.html'
+OUT = ROOT / 'docs/api-index/index.html'
 
 # 절 번호(예: 8-3) -> 예제 노트북 리다이렉트 경로(docs/08-03/)
 SECTION_RE = re.compile(r'^(\d{1,2})-(\d)$')
