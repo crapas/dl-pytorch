@@ -1,0 +1,43 @@
+# Common dependencies for the deep learning book examples
+#
+# This file is used in two ways.
+#   1) pip install -r requirements.txt
+#      Installs the required libraries.
+#   2) pip install -c requirements.txt torch torchvision --index-url <index URL>
+#      On Linux (CPU) and CUDA environments, torch / torchvision are installed from a
+#      separate index. -c applies the version ranges of the two lines below to that
+#      install. (-c does not choose what to install; it only restricts version ranges.)
+#
+# The two lines below (torch, torchvision) are the single source of truth for the
+# PyTorch version.
+# Do not add -r, URL, or option lines (e.g. --index-url) to this file. They may cause
+# errors when the file is read with -c.
+#
+# For per-environment PyTorch installation, follow the setup guides in articles/prolog
+# (macos.md, windows.md, linux.md, windows_wsl2.md).
+#   macOS, Windows (CPU) : install this file only
+#   Linux, WSL2 (CPU)    : install torch / torchvision first with -c, then this file
+#   CUDA environments    : same as above, from the CUDA wheel index
+#
+# Chapter-specific libraries (transformers, peft, bitsandbytes, timm, kagglehub, etc.)
+# are described in the first-cell comments of each notebook (not installed automatically).
+#
+# Verified environment at the time of publication:
+#   Python 3.14, PyTorch 2.12.x, CUDA 13.2 (cu132 wheel)
+#
+# Keep this file ASCII-only. Older pip versions fail to read non-ASCII (e.g. Korean)
+# comments on Windows with a cp949 locale.
+
+# Core (PyTorch)
+torch~=2.12.0
+torchvision~=0.27.0
+
+# Numerics and plotting
+numpy>=2.0
+matplotlib>=3.9
+
+# Model summary
+torchinfo>=1.8
+
+# Jupyter display widgets (shared by Colab and local)
+ipywidgets>=8.1
