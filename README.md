@@ -2,6 +2,8 @@
 
 더 타이즈(도서출판 인사이트)에서 발간한 <멀티모달까지 직접 구현하는 딥러닝 with 파이토치>의 자료실 역할을 하는 저장소입니다.
 
+**질문과 답변** [Discussions](https://github.com/crapas/dl-pytorch/discussions)
+
 **책 구매하기** [교보문고](https://product.kyobobook.co.kr/detail/S000221515403) | [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=403419651&start=pcsearch_auto) | [Yes24](https://www.yes24.com/product/goods/197292161)
 
 ---
