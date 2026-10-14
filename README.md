@@ -2,7 +2,15 @@
 
 더 타이즈(도서출판 인사이트)에서 발간한 <멀티모달까지 직접 구현하는 딥러닝 with 파이토치>의 자료실 역할을 하는 저장소입니다.
 
-**책 구매하기** [교보문고](https://product.kyobobook.co.kr/detail/S000221515403) | [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=403419651&start=pcsearch_auto)
+**책 구매하기** [교보문고](https://product.kyobobook.co.kr/detail/S000221515403) | [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=403419651&start=pcsearch_auto) | [Yes24](https://www.yes24.com/product/goods/197292161)
+
+---
+
+### [바로가기](https://crapas.github.io/dl-pytorch/)
+
+절별 예제 노트북을 비롯해 찾아보기, 공통 라이브러리 API, 참고 문헌, 프롤로그, 심화 학습 자료의 링크를 한곳에 모아 둔 페이지입니다. 책에 인쇄된 절별 주소도 이 페이지로 연결됩니다.
+
+---
 
 ## 수록된 자료와 위치
 아래 디렉터리는 저장소 루트 디렉터리로부터의 상대 경로를 나타냅니다.
@@ -61,7 +69,7 @@
     - 심화 학습 자료에 포함된 연습문제의 풀이도 이어서 제공될 예정입니다.
 
 ### 기타 자료
-- `docs` 디렉터리: 인덱스 웹 페이지(https://crapas.github.io/dl-pytorch/)와 하위 페이지 제공을 위한 웹 문서가 포함되어 있습니다. 이 디렉터리에 포함된 자료는 직접 확인할 필요가 없고, 인덱스 웹 페이지를 통해 내용을 확인할 수 있습니다.
+- `docs` 디렉터리: 앞에서 안내한 [바로가기](https://crapas.github.io/dl-pytorch/) 페이지와 그 하위 페이지를 제공하기 위한 웹 문서가 포함되어 있습니다. 이 디렉터리의 파일을 직접 열어 볼 필요는 없고, 바로가기 페이지를 통해 내용을 확인할 수 있습니다.
     - 본문과 예제 코드에 등장하는 파이토치 API와 예제 모델의 색인도 함께 제공됩니다.
 - `data` 디렉터리: 본문의 예제 또는 연습문제에서 사용하는 데이터 중 저자가 직접 제공하는 데이터 파일이 포함되어 있습니다.
 - `download` 디렉터리
