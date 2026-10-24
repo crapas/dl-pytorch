@@ -6,6 +6,8 @@
 
 **공지, 질문과 답변** [Discussions](https://github.com/crapas/dl-pytorch/discussions)
 
+**[직관 딥러닝 with 파이토치](https://www.youtube.com/@dl-pytorch)** 각 절별 핵심 요약 및 연습문제 해설 동영상 (월~금 오후 6시 순차 업데이트 중)
+**[직구 딥러닝 with 파이토치](https://ties-pytorch.blogspot.com/)** 책, 딥러닝과 파이토치에 관한 글을 가끔 게시하는 기술 블로그
 **책 구매하기** [교보문고](https://product.kyobobook.co.kr/detail/S000221515403) | [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=403419651&start=pcsearch_auto) | [Yes24](https://www.yes24.com/product/goods/197292161)
 
 ---
