@@ -5,8 +5,12 @@
 ![image](./images/front.png)![image](./images/spine.png)![image](./images/back.png)
 
 - **공지, 질문과 답변** [깃허브 Discussions](https://github.com/crapas/dl-pytorch/discussions)
+    - 12-4절 예제 실행 환경 변경과 관련된 공지가 등록되었습니다.
 - **[직관 딥러닝 with 파이토치](https://www.youtube.com/@dl-pytorch)**(유튜브): 각 절별 핵심 요약 및 연습문제 해설 동영상 (월~금 오후 6시 순차 업데이트 중)
+    - 1-1절 핵심 요약과 연습문제 동영상 콘텐츠가 업데이트 되었습니다.
+    - 다음 주(10/26~10/30)에는 1-2절, 1-3절의 콘텐츠가 업데이트됩니다.
 - **[직구 딥러닝 with 파이토치](https://ties-pytorch.blogspot.com/)**(블로그): 책, 딥러닝과 파이토치에 관한 글을 가끔 게시하는 기술 블로그
+    - TorchTPU에 관한 글이 업데이트 되었습니다(10/23)
 - **책 구매하기** [교보문고](https://product.kyobobook.co.kr/detail/S000221515403) | [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=403419651&start=pcsearch_auto) | [Yes24](https://www.yes24.com/product/goods/197292161)
 
 ---
