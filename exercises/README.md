@@ -26,8 +26,13 @@
 | 2-1 | 핵심 요약 | [본문 예제](../code_examples/ch02/02-01_example.ipynb) | [유튜브](https://youtu.be/Z37lYSnAjzs) |
 | | 연습문제 2-1, 2-2, 2-3 | [문제 풀이](ch02/02-01_02-03.ipynb) | [유튜브](https://youtu.be/JwENx4GX1Pk) |
 | 2-2 | 핵심 요약 | [본문 예제](../code_examples/ch02/02-02_example.ipynb) | [유튜브](https://youtu.be/IKuond3lMJ4) |
-| | 연습문제 2-4 | [문제 풀이](ch02/02-04.ipynb) | [유튜브](https://youtu.be/u6B4-BHCqC4) (11/9 18시 업로드) |
-| | 연습문제 2-5, 2-6 | [문제 풀이](ch02/02-05_02-06.ipynb) | [유튜브](https://youtu.be/v9xeSS8ntk0) (11/10 18시 업로드) |
-| 2-3 | 핵심 요약 | [본문 예제](../code_examples/ch02/02-03_example.ipynb) | [유튜브](https://youtu.be/KHv-Pmm_LOM) (11/11 18시 업로드) |
-| | 연습문제 2-7, 2-8 | [문제 풀이](ch02/02-07_02-08.ipynb) | [유튜브](https://youtu.be/SpxT05JsXOA) (11/12 18시 업로드) |
-| | 연습문제 2-9, 2-10 | [문제 풀이](ch02/02-09_02-10.ipynb) | [유튜브](https://youtu.be/Dzv4HAJrr1c) (11/13 18시 업로드) |
+| | 연습문제 2-4 | [문제 풀이](ch02/02-04.ipynb) | [유튜브](https://youtu.be/u6B4-BHCqC4) |
+| | 연습문제 2-5, 2-6 | [문제 풀이](ch02/02-05_02-06.ipynb) | [유튜브](https://youtu.be/v9xeSS8ntk0) |
+| 2-3 | 핵심 요약 | [본문 예제](../code_examples/ch02/02-03_example.ipynb) | [유튜브](https://youtu.be/KHv-Pmm_LOM) |
+| | 연습문제 2-7, 2-8 | [문제 풀이](ch02/02-07_02-08.ipynb) | [유튜브](https://youtu.be/SpxT05JsXOA) |
+| | 연습문제 2-9, 2-10 | [문제 풀이](ch02/02-09_02-10.ipynb) | [유튜브](https://youtu.be/Dzv4HAJrr1c) |
+| 3-1 | 핵심 요약 | [본문 예제](../code_examples/ch03/03-01_example.ipynb) | [유튜브](https://youtu.be/0cvilRnTFc0) (11/16 18시 업로드) |
+| | 연습문제 3-1, 3-2 | [문제 풀이](ch03/03-01_03-02.ipynb) | [유튜브](https://youtu.be/3NcqhvctElM) (11/17 18시 업로드) |
+| 3-2 | 핵심 요약 | [본문 예제](../code_examples/ch03/03-02_example.ipynb) | [유튜브](https://youtu.be/3QmBgqL3vQE) (11/18 18시 업로드) |
+| | 연습문제 3-3, 3-4 | [문제 풀이](ch03/03-03_03-04.ipynb) | [유튜브](https://youtu.be/YvTx606HS2U) (11/19 18시 업로드) |
+| | 연습문제 3-5, 3-8(도전문제) | [문제 풀이](ch03/03-05_03-08.ipynb) | [유튜브](https://youtu.be/hV0CjyIFFkI) (11/20 18시 업로드) |
